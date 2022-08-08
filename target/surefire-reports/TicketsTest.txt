@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: TicketsTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.068 s <<< FAILURE! - in TicketsTest
+shouldFindTickets  Time elapsed: 0.058 s  <<< ERROR!
+java.lang.NegativeArraySizeException: -1
+	at TicketsTest.shouldFindTickets(TicketsTest.java:28)
+
