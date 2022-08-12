@@ -23,9 +23,25 @@ public class TicketsTest {
     }
 
     @Test
-    public void shouldFindTickets() {
+    public void shouldFindSeveralTickets() {
         Tickets[] expected = { ticket3, ticket2 };
         Tickets[] actual = manager.searchBy("SVO", "SVX");
+
+        assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void shouldFindOneTicket() {
+        Tickets[] expected = { ticket1 };
+        Tickets[] actual = manager.searchBy("SVO", "OVB");
+
+        assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void shouldNotFindTickets() {
+        Tickets[] expected = {};
+        Tickets[] actual = manager.searchBy("SVO", "MDM");
 
         assertArrayEquals(expected, actual);
     }
